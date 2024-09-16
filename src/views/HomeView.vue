@@ -11,8 +11,9 @@
           <img width="4" height="16" src="@/assets/images/index/juxing.png" alt="" />
           <img height="24" src="@/assets/images/card-title2.png" alt="" />
         </a-flex>
-        <a-flex :gap="23" wrap="wrap" style="margin-top: 8px">
+        <div class="service-container" style="margin-top: 8px">
           <a-flex
+            class="service-item"
             gap="small"
             vertical
             style="width: 60px"
@@ -25,7 +26,7 @@
             </div>
             <span style="font-size: 12px">{{ item.title }}</span>
           </a-flex>
-        </a-flex>
+        </div>
       </a-card>
 
       <!-- 自主服务 -->
@@ -34,8 +35,9 @@
           <img width="4" height="16" src="@/assets/images/index/juxing.png" alt="" />
           <img height="24" src="@/assets/images/card-title1.png" alt="" />
         </a-flex>
-        <a-flex :gap="23" wrap="wrap" style="margin-top: 8px">
+        <div class="service-container" style="margin-top: 8px">
           <a-flex
+            class="service-item"
             gap="small"
             vertical
             style="width: 60px"
@@ -48,7 +50,7 @@
             </div>
             <span style="font-size: 12px">{{ item.title }}</span>
           </a-flex>
-        </a-flex>
+        </div>
       </a-card>
     </a-flex>
   </div>
@@ -68,8 +70,6 @@ const router = useRouter()
 const navigateTo = (path: string) => {
   router.push(path)
 }
-
-console.log(12312312, router)
 </script>
 
 <style scoped lang="less">
@@ -92,5 +92,16 @@ console.log(12312312, router)
 }
 :deep(.ant-card .ant-card-body) {
   padding: 12px;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-item {
+  flex-basis: calc(25% - 10px);
+  margin-bottom: 20px;
 }
 </style>
