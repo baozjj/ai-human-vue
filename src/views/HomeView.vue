@@ -20,7 +20,7 @@
             v-for="item in managementServiceArr"
             :key="item.title"
           >
-            <div style="width: 40px" @click="item.click">
+            <div style="width: 40px" @click="navigateTo(item.route)">
               <img width="100%" :src="item.imgUrl" alt="" />
             </div>
             <span style="font-size: 12px">{{ item.title }}</span>
@@ -60,14 +60,24 @@
 <script setup lang="ts">
 import TopBg from '@/components/TopBg/index.vue'
 import { selfServiceArr, managementServiceArr } from '@/services/home/const'
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const navigateTo = (path: string) => {
+  router.push(path)
+}
+
+console.log(12312312, router)
 </script>
 
 <style scoped lang="less">
 .loc-img {
-  width: 100%; /* 图片宽度100% */
-  height: auto; /* 高度根据图片比例自动调整 */
-  object-fit: cover; /* 图片保持比例并覆盖容器 */
-  display: block; /* 移除图片底部可能的空白间隙 */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 .home-container {

@@ -15,56 +15,65 @@ import meirongmeifa from '@/assets/images/index/meirongmeifa.png'
 export const selfServiceArr = [
   {
     title: '房屋管理',
-    imgUrl: fangwuguanli
+    imgUrl: fangwuguanli,
+    route: '/'
   },
   {
     title: '车位管理',
-    imgUrl: cheweiguanli
+    imgUrl: cheweiguanli,
+    route: '/'
   },
   {
     title: '车辆管理',
-    imgUrl: cheliangguanli
+    imgUrl: cheliangguanli,
+    route: '/'
   },
   {
     title: '人员管理',
-    imgUrl: renyuanguanli
+    imgUrl: renyuanguanli,
+    route: '/'
   },
   {
     title: '访客申报',
-    imgUrl: fangkeshenbao
+    imgUrl: fangkeshenbao,
+    route: '/'
   },
   {
     title: '议题征集',
-    imgUrl: yitizhengji
+    imgUrl: yitizhengji,
+    route: '/'
   },
   {
     title: '投票表决',
-    imgUrl: toupiaobiaojue
+    imgUrl: toupiaobiaojue,
+    route: '/'
   },
   {
     title: '满意度调查',
-    imgUrl: manyidudiaocha
+    imgUrl: manyidudiaocha,
+    route: '/'
   }
 ]
 
 export const managementServiceArr = [
   {
     title: '物业报事',
-    imgUrl: wuyebaoshi
+    imgUrl: wuyebaoshi,
+    route: '/'
   },
   {
     title: '物业报修',
-    imgUrl: wuyebaoxiu
+    imgUrl: wuyebaoxiu,
+    route: '/'
   },
   {
     title: '物业缴费',
-    imgUrl: wuyejiaofei
+    imgUrl: wuyejiaofei,
+    route: '/'
   },
   {
     title: '智能客服',
     imgUrl: meirongmeifa,
-    click: () => {
-      console.log(12312312)
-    }
+    route: '/human'
   }
 ]
